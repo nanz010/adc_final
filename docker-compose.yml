@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  adc-analyzer:
+    build: .
+    container_name: adc_analyzer_pro
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
